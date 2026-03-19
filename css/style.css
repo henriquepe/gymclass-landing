@@ -677,6 +677,201 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 /* =============================================
+   INVESTIMENTO
+   ============================================= */
+.investimento { background: var(--color-bg); }
+
+/* Pricing cards */
+.investimento__pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto 32px;
+}
+.investimento__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  text-align: center;
+}
+.investimento__card--highlight {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-bg);
+}
+.investimento__card-label {
+  font-size: .8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.investimento__card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.investimento__currency {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.investimento__amount {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+}
+.investimento__period {
+  font-size: .9375rem;
+  color: var(--color-text-muted);
+}
+.investimento__card p {
+  font-size: .875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+.investimento__total {
+  text-align: center;
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 56px;
+  padding: 20px 24px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.investimento__total strong {
+  color: var(--color-primary-dark);
+  font-size: 1.25rem;
+}
+
+/* Comparativo desenvolvimento */
+.investimento__comparativo {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  margin-bottom: 40px;
+}
+.investimento__comparativo h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 24px;
+  text-align: center;
+}
+.comparativo__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.comparativo__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.comparativo__icon { flex-shrink: 0; }
+.comparativo__title {
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.comparativo__price {
+  font-size: .875rem;
+  color: var(--color-danger);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+.comparativo__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.comparativo__total span {
+  font-size: .9375rem;
+  color: var(--color-text-secondary);
+}
+.comparativo__total strong {
+  font-size: 1.125rem;
+  color: var(--color-danger);
+}
+
+/* Concorrentes SaaS */
+.investimento__concorrentes {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+}
+.investimento__concorrentes h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.concorrentes__intro {
+  text-align: center;
+  font-size: .9375rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.concorrentes__table {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+.concorrentes__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .875rem;
+}
+.concorrentes__table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: var(--color-bg);
+  font-weight: 700;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-border);
+}
+.concorrentes__table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+.concorrentes__table tr:last-child td { border-bottom: none; }
+.concorrentes__nota {
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  padding: 16px 20px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+}
+.concorrentes__nota strong { color: var(--color-primary-dark); }
+
+/* =============================================
    FAQ
    ============================================= */
 .faq { background: var(--color-bg); }
@@ -868,6 +1063,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
   /* Incluso */
   .incluso__grid { grid-template-columns: 1fr; }
+
+  /* Investimento */
+  .investimento__pricing { grid-template-columns: 1fr; max-width: 400px; }
+  .investimento__amount { font-size: 2.25rem; }
+  .investimento__comparativo,
+  .investimento__concorrentes { padding: 28px 20px; }
+  .comparativo__total { flex-direction: column; text-align: center; }
 
   /* CTA */
   .cta-final { padding: 64px 0; }
